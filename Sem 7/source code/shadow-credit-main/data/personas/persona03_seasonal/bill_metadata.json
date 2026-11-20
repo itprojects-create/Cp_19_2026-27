@@ -1,0 +1,8 @@
+{
+  "bill_type": "ELECTRICITY",
+  "provider": "MSEDCL",
+  "amount_due": 2100.0,
+  "units_consumed": 380,
+  "ocr_confidence": 0.89,
+  "agent_id": "AGENT_01_OCR"
+}

@@ -1,0 +1,13 @@
+{
+  "recommendation": {
+    "decision": "AUTO_ACCEPT",
+    "recommendedAmount": 105000.0,
+    "suggestedTenorMonths": 12,
+    "conditions": [],
+    "nextSteps": [
+      "Complete KYC verification",
+      "Review latest cashflow evidence"
+    ]
+  },
+  "complianceChecklist": []
+}

@@ -1,0 +1,84 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 36px;
+  padding: 0 var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background 100ms ease;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row:hover {
+  background: var(--bg-overlay);
+}
+
+.label {
+  font: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.valueContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.value {
+  font: var(--text-sm);
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.confidenceBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 18px;
+  padding: 0 6px;
+  border-radius: var(--radius-sm);
+  font: var(--text-mono);
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.confidenceBadge:hover {
+  transform: scale(1.05);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.high {
+  background: var(--status-success-subtle);
+  color: var(--status-success);
+}
+
+.high .dot {
+  background: var(--status-success);
+}
+
+.medium {
+  background: var(--status-warning-subtle);
+  color: var(--status-warning);
+}
+
+.medium .dot {
+  background: var(--status-warning);
+}
+
+.low {
+  background: var(--status-error-subtle);
+  color: var(--status-error);
+}
+
+.low .dot {
+  background: var(--status-error);
+}

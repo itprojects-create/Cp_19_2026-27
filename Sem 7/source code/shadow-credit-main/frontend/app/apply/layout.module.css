@@ -1,0 +1,55 @@
+.container {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  background: var(--color-bg);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background: var(--color-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 100;
+}
+
+.backButton {
+  width: var(--touch-tap-area);
+  height: var(--touch-tap-area);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--color-text-primary);
+  margin-left: -12px;
+}
+
+.appName {
+  flex: 1;
+  text-align: center;
+  font: var(--text-label);
+  color: var(--color-text-secondary);
+  margin-right: var(--touch-tap-area);
+}
+
+.progressContainer {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-bg);
+  z-index: 99;
+}
+
+.main {
+  padding-top: calc(56px + 60px); /* header + progress */
+  padding-bottom: 80px; /* bottom CTA */
+  min-height: 100vh;
+}

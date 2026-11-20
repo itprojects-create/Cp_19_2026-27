@@ -1,0 +1,212 @@
+[
+  {
+    "transaction_id": "UPI80000001",
+    "date": "2026-01-01",
+    "time": "10:45:00",
+    "amount": 240.0,
+    "type": "CREDIT",
+    "counterparty_name": "Ramesh Bhosale",
+    "upi_id": "ramesh@paytm",
+    "reference": "PhonePe"
+  },
+  {
+    "transaction_id": "UPI80000002",
+    "date": "2026-01-02",
+    "time": "11:45:00",
+    "amount": 180.0,
+    "type": "CREDIT",
+    "counterparty_name": "Ashok Patil",
+    "upi_id": "ashok@paytm",
+    "reference": "PhonePe"
+  },
+  {
+    "transaction_id": "UPI80000003",
+    "date": "2026-01-03",
+    "time": "14:05:00",
+    "amount": 162.0,
+    "type": "CREDIT",
+    "counterparty_name": "Sunita More",
+    "upi_id": "sunita@paytm",
+    "reference": "PhonePe"
+  },
+  {
+    "transaction_id": "UPI80000004",
+    "date": "2026-01-04",
+    "time": "18:30:00",
+    "amount": 340.0,
+    "type": "CREDIT",
+    "counterparty_name": "Vijay Kadam",
+    "upi_id": "vijay@paytm",
+    "reference": "Cash noted"
+  },
+  {
+    "transaction_id": "UPI80000005",
+    "date": "2026-01-05",
+    "time": "10:47:00",
+    "amount": 520.0,
+    "type": "CREDIT",
+    "counterparty_name": "Ramesh Bhosale",
+    "upi_id": "ramesh@paytm",
+    "reference": "PhonePe"
+  },
+  {
+    "transaction_id": "UPI80000006",
+    "date": "2026-01-08",
+    "time": "09:47:00",
+    "amount": 1040.0,
+    "type": "CREDIT",
+    "counterparty_name": "Vijay Kadam",
+    "upi_id": "vijay@paytm",
+    "reference": "PhonePe wholesale"
+  },
+  {
+    "transaction_id": "UPI80000007",
+    "date": "2026-01-09",
+    "time": "11:40:00",
+    "amount": 245.0,
+    "type": "CREDIT",
+    "counterparty_name": "Ashok Patil",
+    "upi_id": "ashok@paytm",
+    "reference": "PhonePe"
+  },
+  {
+    "transaction_id": "UPI80000008",
+    "date": "2026-01-11",
+    "time": "10:02:00",
+    "amount": 1840.0,
+    "type": "CREDIT",
+    "counterparty_name": "Priya Deshpande",
+    "upi_id": "priya@paytm",
+    "reference": "PhonePe khata clear"
+  },
+  {
+    "transaction_id": "UPI80000009",
+    "date": "2026-01-13",
+    "time": "10:22:00",
+    "amount": 380.0,
+    "type": "CREDIT",
+    "counterparty_name": "Ramesh Bhosale",
+    "upi_id": "ramesh@paytm",
+    "reference": "PhonePe Sankranti"
+  },
+  {
+    "transaction_id": "UPI80000010",
+    "date": "2026-01-15",
+    "time": "11:20:00",
+    "amount": 2150.0,
+    "type": "CREDIT",
+    "counterparty_name": "Ashok Patil",
+    "upi_id": "ashok@paytm",
+    "reference": "PhonePe"
+  },
+  {
+    "transaction_id": "UPI80000011",
+    "date": "2026-01-17",
+    "time": "14:20:00",
+    "amount": 95.0,
+    "type": "CREDIT",
+    "counterparty_name": "Sunita More",
+    "upi_id": "sunita@paytm",
+    "reference": "Cash"
+  },
+  {
+    "transaction_id": "UPI80000012",
+    "date": "2026-01-19",
+    "time": "07:35:00",
+    "amount": 420.0,
+    "type": "CREDIT",
+    "counterparty_name": "Priya Deshpande",
+    "upi_id": "priya@paytm",
+    "reference": "PhonePe"
+  },
+  {
+    "transaction_id": "UPI80000013",
+    "date": "2026-01-20",
+    "time": "10:10:00",
+    "amount": 480.0,
+    "type": "CREDIT",
+    "counterparty_name": "Ramesh Bhosale",
+    "upi_id": "ramesh@paytm",
+    "reference": "PhonePe"
+  },
+  {
+    "transaction_id": "UPI80000014",
+    "date": "2026-01-22",
+    "time": "17:05:00",
+    "amount": 2200.0,
+    "type": "CREDIT",
+    "counterparty_name": "Vijay Kadam",
+    "upi_id": "vijay@paytm",
+    "reference": "Cash wholesale"
+  },
+  {
+    "transaction_id": "UPI80000015",
+    "date": "2026-01-27",
+    "time": "16:46:00",
+    "amount": 680.0,
+    "type": "CREDIT",
+    "counterparty_name": "Ramesh Bhosale",
+    "upi_id": "ramesh@paytm",
+    "reference": "PhonePe"
+  },
+  {
+    "transaction_id": "UPI80000016",
+    "date": "2026-01-30",
+    "time": "17:02:00",
+    "amount": 3400.0,
+    "type": "CREDIT",
+    "counterparty_name": "Vijay Kadam",
+    "upi_id": "vijay@paytm",
+    "reference": "PhonePe"
+  },
+  {
+    "transaction_id": "UPI80000017",
+    "date": "2026-02-05",
+    "time": "11:00:00",
+    "amount": 590.0,
+    "type": "CREDIT",
+    "counterparty_name": "Priya Deshpande",
+    "upi_id": "priya@paytm",
+    "reference": "PhonePe"
+  },
+  {
+    "transaction_id": "UPI80000018",
+    "date": "2026-02-14",
+    "time": "14:30:00",
+    "amount": 450.0,
+    "type": "CREDIT",
+    "counterparty_name": "Vijay Kadam",
+    "upi_id": "vijay@paytm",
+    "reference": "PhonePe"
+  },
+  {
+    "transaction_id": "UPI80000019",
+    "date": "2026-02-22",
+    "time": "18:12:00",
+    "amount": 1950.0,
+    "type": "CREDIT",
+    "counterparty_name": "Ashok Patil",
+    "upi_id": "ashok@paytm",
+    "reference": "PhonePe"
+  },
+  {
+    "transaction_id": "UPI80000020",
+    "date": "2026-03-07",
+    "time": "10:05:00",
+    "amount": 1200.0,
+    "type": "CREDIT",
+    "counterparty_name": "Priya Deshpande",
+    "upi_id": "priya@paytm",
+    "reference": "PhonePe Holi"
+  },
+  {
+    "transaction_id": "UPI80000021",
+    "date": "2026-03-20",
+    "time": "17:46:00",
+    "amount": 4100.0,
+    "type": "CREDIT",
+    "counterparty_name": "Vijay Kadam",
+    "upi_id": "vijay@paytm",
+    "reference": "PhonePe wholesale"
+  }
+]

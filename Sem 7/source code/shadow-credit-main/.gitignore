@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+.next/
+__pycache__/
+*.pyc
+
+# Environment variables — NEVER commit these
+.env
+.env.local
+.env.production
+.env*.local
+backend/.env
+
+# Python venv
+venv/
+env/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build
+dist/
+build/
+out/
+
+# Database
+data/shadow_credit.db
+*.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

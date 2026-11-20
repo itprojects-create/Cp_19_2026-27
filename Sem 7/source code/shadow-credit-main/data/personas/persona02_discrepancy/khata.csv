@@ -1,0 +1,12 @@
+Date,Party Name,Transaction Type,Amount,Balance,Notes
+01-Jan-2026,Mahesh Jadhav,Credit,2000,2000,Cash wholesale
+02-Jan-2026,Sunil Contractor,Credit,5000,7000,Cash site order
+07-Jan-2026,Mahesh Jadhav,Credit,1500,8500,Cash
+08-Jan-2026,Sunil Contractor,Credit,3000,11500,Cash
+12-Jan-2026,Mahesh Jadhav,Credit,2200,13700,Cash
+17-Jan-2026,Sunil Contractor,Credit,8000,21700,Cash large
+27-Jan-2026,Sunil Contractor,Credit,6000,27700,Cash
+05-Feb-2026,Mahesh Jadhav,Credit,3000,30700,Cash
+10-Feb-2026,Sunil Contractor,Credit,7500,38200,Cash
+08-Mar-2026,Sunil Contractor,Credit,9000,47200,Cash
+25-Mar-2026,Sunil Contractor,Credit,11000,58200,Cash final

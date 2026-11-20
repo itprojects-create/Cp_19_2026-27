@@ -1,0 +1,42 @@
+[
+  {
+    "transaction_id": "UPI90000001",
+    "date": "2026-01-15",
+    "time": "10:02:00",
+    "amount": 850.0,
+    "type": "CREDIT",
+    "counterparty_name": "Customer Deepak",
+    "upi_id": "deepak@ybl",
+    "reference": "Google Pay"
+  },
+  {
+    "transaction_id": "UPI90000002",
+    "date": "2026-01-25",
+    "time": "14:00:00",
+    "amount": 1200.0,
+    "type": "CREDIT",
+    "counterparty_name": "Customer Deepak",
+    "upi_id": "deepak@ybl",
+    "reference": "Google Pay"
+  },
+  {
+    "transaction_id": "UPI90000003",
+    "date": "2026-02-12",
+    "time": "09:00:00",
+    "amount": 650.0,
+    "type": "CREDIT",
+    "counterparty_name": "Customer Deepak",
+    "upi_id": "deepak@ybl",
+    "reference": "Google Pay"
+  },
+  {
+    "transaction_id": "UPI90000004",
+    "date": "2026-03-22",
+    "time": "11:00:00",
+    "amount": 1100.0,
+    "type": "CREDIT",
+    "counterparty_name": "Customer Deepak",
+    "upi_id": "deepak@ybl",
+    "reference": "Google Pay"
+  }
+]

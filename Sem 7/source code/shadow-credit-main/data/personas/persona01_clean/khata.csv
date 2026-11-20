@@ -1,0 +1,13 @@
+Date,Party Name,Transaction Type,Amount,Balance,Notes
+01-Jan-2026,Ramesh Bhosale,Credit,240,240,PhonePe
+02-Jan-2026,Ashok Patil,Credit,180,420,PhonePe
+03-Jan-2026,Sunita More,Credit,162,582,PhonePe
+04-Jan-2026,Vijay Kadam,Credit,340,922,Cash
+05-Jan-2026,Ramesh Bhosale,Credit,520,1442,PhonePe
+08-Jan-2026,Vijay Kadam,Credit,1040,2482,Wholesale
+11-Jan-2026,Priya Deshpande,Credit,1840,4322,Khata clear
+15-Jan-2026,Ashok Patil,Credit,2150,6472,Monthly settle
+22-Jan-2026,Vijay Kadam,Credit,2200,8672,Wholesale cash
+30-Jan-2026,Vijay Kadam,Credit,3400,12072,Month end
+28-Feb-2026,Suresh,Debit,4200,7872,Stock purchase
+20-Mar-2026,Vijay Kadam,Credit,4100,11972,March wholesale

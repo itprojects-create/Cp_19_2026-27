@@ -1,0 +1,428 @@
+.step {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Heading ─────────────────────────────────────────────────────── */
+.heading { display: flex; flex-direction: column; gap: 8px; }
+
+.title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.subtitle {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ── Summary card ────────────────────────────────────────────────── */
+.summaryCard {
+  background: var(--bg-raised);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: fadeIn var(--duration-base) var(--ease-out) both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.summaryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.summaryEyebrow {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.summaryStatus {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--success);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  background: var(--success-dim);
+  border: 1px solid var(--success);
+  border-radius: var(--radius-full);
+}
+
+.summaryDivider {
+  height: 1px;
+  background: var(--border-subtle);
+}
+
+.summaryGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.summaryKey {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  font-weight: 500;
+  flex-shrink: 0;
+  min-width: 72px;
+}
+
+.summaryVal {
+  font-size: 13px;
+  color: var(--text-primary);
+  font-weight: 500;
+  text-align: right;
+  word-break: break-word;
+}
+
+.summaryValGreen { color: var(--success); }
+.summaryValMuted { color: var(--text-muted); }
+
+/* ── Agents block ────────────────────────────────────────────────── */
+.agentsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 18px;
+  background: var(--bg-void);
+  border: 1px solid var(--border-default);
+  border-left: 3px solid var(--brand);
+  border-radius: var(--radius-md);
+}
+
+.agentsLabel {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.agentPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.agentPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-full);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.agentPillDot {
+  width: 5px;
+  height: 5px;
+  border-radius: var(--radius-full);
+  background: var(--brand);
+  flex-shrink: 0;
+}
+
+.agentsTime {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.agentsTime strong {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* ── Consent checkbox ────────────────────────────────────────────── */
+.consentLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  cursor: pointer;
+  padding: 16px 18px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out);
+}
+
+.consentLabel:hover {
+  border-color: var(--border-strong);
+  background: var(--bg-overlay);
+}
+
+/* When consented — label border turns brand color */
+.consentLabel:has(.checkboxChecked) {
+  border-color: var(--border-focus);
+  background: var(--brand-glow-lg);
+}
+
+/* ── Hidden native checkbox ──────────────────────────────────────── */
+.checkboxWrap {
+  position: relative;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.checkboxInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+/* ── Custom checkbox visual ──────────────────────────────────────── */
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border-strong);
+  background: var(--bg-interactive);
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkboxChecked {
+  background: var(--brand) !important;
+  border-color: var(--brand) !important;
+  box-shadow: 0 0 10px var(--brand-glow);
+  animation: checkPop var(--duration-base) cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes checkPop {
+  0%   { transform: scale(0.8); }
+  60%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* SVG checkmark path draw animation */
+.checkmark {
+  animation: drawCheck 200ms var(--ease-out) both;
+}
+
+@keyframes drawCheck {
+  from { stroke-dashoffset: 20; stroke-dasharray: 20; }
+  to   { stroke-dashoffset: 0;  stroke-dasharray: 20; }
+}
+
+/* ── Consent text ────────────────────────────────────────────────── */
+.consentText {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  cursor: pointer;
+}
+
+.consentHighlight {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ── Error ───────────────────────────────────────────────────────── */
+.errorMsg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--danger-dim);
+  border: 1px solid var(--danger);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--danger);
+  line-height: 1.5;
+  animation: errorShake 400ms var(--ease-out) both;
+}
+
+.errorDot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--danger);
+  flex-shrink: 0;
+}
+
+@keyframes errorShake {
+  0%,100% { transform: translateX(0); }
+  20%     { transform: translateX(-5px); }
+  40%     { transform: translateX(5px); }
+  60%     { transform: translateX(-3px); }
+  80%     { transform: translateX(3px); }
+}
+
+/* ── Launch button ───────────────────────────────────────────────── */
+/* The most important button in the entire apply flow.              */
+/* 60px height. Full width. Cannot be ignored. Cannot be missed.    */
+/* Disabled state is visually clear but not aggressive.             */
+.launchBtn {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-violet));
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  box-shadow:
+    0 0 32px var(--brand-glow),
+    0 4px 16px rgba(0, 0, 0, 0.5);
+  transition:
+    box-shadow var(--duration-base) var(--ease-out),
+    transform var(--duration-fast) cubic-bezier(0.16, 1, 0.3, 1),
+    opacity var(--duration-base) var(--ease-out);
+  overflow: hidden;
+}
+
+/* Disabled — consent not given yet */
+.launchBtnDisabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  box-shadow: none !important;
+  transform: none !important;
+  pointer-events: none;
+}
+
+/* Enabled — glow pulses softly to draw attention */
+.launchBtn:not(.launchBtnDisabled) {
+  animation: launchGlow 3s ease-in-out infinite;
+}
+
+@keyframes launchGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 32px var(--brand-glow),
+      0 4px 16px rgba(0,0,0,0.5);
+  }
+  50% {
+    box-shadow:
+      0 0 48px var(--brand-glow),
+      0 0 0 1px rgba(99,102,241,0.4),
+      0 8px 24px rgba(0,0,0,0.6);
+  }
+}
+
+.launchBtn:hover:not(.launchBtnDisabled):not(:disabled) {
+  transform: translateY(-2px) scale(1.01);
+  animation: none;
+  box-shadow:
+    0 0 56px var(--brand-glow),
+    0 0 0 1px rgba(99,102,241,0.55),
+    0 12px 28px rgba(0,0,0,0.6);
+}
+
+.launchBtn:active:not(.launchBtnDisabled):not(:disabled) {
+  transform: translateY(0) scale(0.99);
+  animation: none;
+}
+
+.launchArrow {
+  font-size: 18px;
+  font-family: var(--font-body);
+  display: inline-block;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.launchBtn:hover:not(.launchBtnDisabled) .launchArrow {
+  transform: translateX(5px);
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(255,255,255,0.25);
+  border-top-color: rgba(255,255,255,0.95);
+  border-radius: var(--radius-full);
+  animation: spin 700ms linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Trust badges ────────────────────────────────────────────────── */
+/* Three small authority signals. Whisper — do not shout.           */
+.trustBadges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.trustBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-full);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 380px) {
+  .title { font-size: 20px; }
+
+  .launchBtn {
+    height: 54px;
+    font-size: 15px;
+  }
+
+  .trustBadges { gap: 6px; }
+
+  .trustBadge { font-size: 10.5px; padding: 4px 10px; }
+
+  .agentPill { font-size: 10.5px; padding: 3px 8px; }
+}
