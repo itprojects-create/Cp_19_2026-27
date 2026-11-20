@@ -1,0 +1,44 @@
+[15/02/26, 09:14:22] Ganesh Patil: Bhaiya good morning, aaj dukaan khuli hai kya?
+[15/02/26, 09:15:03] Suraj Super Mart: Haan ji, khuli hai. Aa jao
+[15/02/26, 11:32:10] Meera Traders: Sugar 5kg aur atta 10kg chahiye
+[15/02/26, 11:45:55] Meera Traders: Payment kar diya UPI se ₹850
+[15/02/26, 11:46:20] Suraj Super Mart: Received, dhanyavaad
+[16/02/26, 08:05:41] Ganesh Patil: Kal wala udhaar ₹500 abhi pay kar raha hu
+[16/02/26, 08:10:15] Ganesh Patil: Done, UPI se bhej diya
+[16/02/26, 08:11:02] Suraj Super Mart: Thanks Ganesh bhai
+[17/02/26, 10:22:30] Kavita Deshmukh: Namaste, tel aur masala ka packet rakh lena mere liye
+[17/02/26, 11:05:12] Kavita Deshmukh: UPI se ₹320 bhej diya
+[17/02/26, 11:06:00] Suraj Super Mart: Received, dhanyavaad
+[18/02/26, 09:00:19] Sanjay Wagh: Bhaiya 2 packet biscuit aur ek cold drink
+[18/02/26, 09:01:55] Sanjay Wagh: ₹180 UPI se send kiya
+[18/02/26, 09:02:10] Suraj Super Mart: Confirm ho gaya, dhanyavaad
+[19/02/26, 12:15:30] Meera Traders: Is hafte ka regular order - chawal 25kg
+[19/02/26, 12:40:02] Meera Traders: ₹1450 transfer kar diya
+[19/02/26, 12:41:00] Suraj Super Mart: Received Meera ji
+[20/02/26, 07:55:18] Ganesh Patil: Doodh aur bread chahiye roz ki tarah
+[20/02/26, 08:03:44] Ganesh Patil: ₹90 UPI se bhej diya
+[20/02/26, 08:04:20] Suraj Super Mart: Received
+[21/02/26, 10:10:05] Kavita Deshmukh: Namak, haldi, mirch powder chahiye
+[21/02/26, 10:35:20] Kavita Deshmukh: ₹220 UPI kar diya
+[21/02/26, 10:36:00] Suraj Super Mart: Received thank you
+[22/02/26, 14:20:33] Sanjay Wagh: Bhaiya ghee ka dabba rakhna
+[22/02/26, 14:45:10] Sanjay Wagh: ₹650 UPI se
+[22/02/26, 14:46:00] Suraj Super Mart: Confirm
+[23/02/26, 09:30:15] Meera Traders: Weekly order - dal 10kg, tel 5L
+[23/02/26, 09:55:40] Meera Traders: ₹1200 bhej diya
+[23/02/26, 09:56:20] Suraj Super Mart: Received, dhanyavaad Meera ji
+[24/02/26, 11:00:22] Ganesh Patil: Aaj bhi doodh bread
+[24/02/26, 11:08:00] Ganesh Patil: ₹90 UPI se
+[24/02/26, 11:08:40] Suraj Super Mart: Received
+[25/02/26, 16:40:10] Kavita Deshmukh: Diwali ke liye extra saman - mithai ke box, sujji, ghee
+[25/02/26, 17:10:33] Kavita Deshmukh: ₹1800 UPI se transfer kiya
+[25/02/26, 17:11:15] Suraj Super Mart: Received, Diwali ki shubhkamnayein
+[26/02/26, 08:45:20] Sanjay Wagh: 2 packet chips aur namkeen
+[26/02/26, 08:47:50] Sanjay Wagh: ₹150 UPI se bhej diya
+[26/02/26, 08:50:12] Suraj Super Mart: Mil gaya, dhanyavaad
+[27/02/26, 10:20:05] Meera Traders: Regular order chawal aur atta
+[27/02/26, 10:50:33] Meera Traders: ₹1350 UPI se send kiya
+[27/02/26, 10:51:10] Suraj Super Mart: Received
+[28/02/26, 09:10:44] Ganesh Patil: Doodh bread aaj bhi
+[28/02/26, 09:12:20] Ganesh Patil: ₹90 UPI se
+[28/02/26, 09:12:50] Suraj Super Mart: Received

@@ -1,0 +1,20 @@
+{
+  "persona_id": "persona02_discrepancy",
+  "display_name": "Rajesh Sharma",
+  "business_name": "Rajesh General & Provision Store",
+  "business_type": "General Store",
+  "location_masked": "Kothrud, Pune, Maharashtra",
+  "years_in_operation": 4,
+  "demo_mode": true,
+  "expected_outcomes": {
+    "warmth_grade": "B+",
+    "pre_clarification_credit_limit": 60000,
+    "credit_limit_range": [
+      75000,
+      90000
+    ],
+    "clarification_expected": true,
+    "clarification_trigger": "SIGNIFICANT_CASH_GAP",
+    "forensic_finding": "SIGNIFICANT"
+  }
+}

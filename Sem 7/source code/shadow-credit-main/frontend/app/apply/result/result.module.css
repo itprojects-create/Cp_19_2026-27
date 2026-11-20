@@ -1,0 +1,577 @@
+/* ════════════════════════════════════════════════════════════════
+   ROOT
+   ════════════════════════════════════════════════════════════════ */
+.root {
+  min-height: 100vh;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   TOP BAR
+   ════════════════════════════════════════════════════════════════ */
+.topBar {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--border-default);
+  flex-shrink: 0;
+}
+
+.wordmark {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   LOADING & GAVE UP STATES
+   ════════════════════════════════════════════════════════════════ */
+.loadingWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.loadingSpinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--border-default);
+  border-top-color: var(--brand-primary);
+  border-radius: 50%;
+  animation: spin 750ms linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loadingText {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.gaveUpTitle {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.gaveUpSub {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 440px;
+  margin: 0;
+}
+
+.gaveUpContact {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   CONTENT COLUMN
+   ════════════════════════════════════════════════════════════════ */
+.content {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   VERDICT CARD
+   ════════════════════════════════════════════════════════════════ */
+.verdictCard {
+  background: var(--grade-dim, var(--bg-raised));
+  border: 1px solid var(--grade-border, var(--border-default));
+  border-radius: var(--radius-xl);
+  padding: 36px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  animation: cardReveal 500ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes cardReveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* Grade badge */
+.gradeBadge {
+  display: inline-flex;
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--grade-color);
+  background: var(--grade-dim);
+  border: 1px solid var(--grade-border);
+  border-radius: var(--radius-full);
+  padding: 4px 12px;
+  margin-bottom: 20px;
+  animation: fadeSlideDown 400ms ease both;
+}
+
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* Headline */
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0 0 10px;
+  animation: fadeSlideUp 500ms ease 80ms both;
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.headlineItalic {
+  font-style: italic;
+  font-family: var(--font-display);
+}
+
+/* Subline */
+.subline {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  animation: fadeIn 400ms ease 160ms both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Amount */
+.amountWrap {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: amountReveal 500ms cubic-bezier(0.16, 1, 0.3, 1) 300ms both;
+}
+
+@keyframes amountReveal {
+  from { opacity: 0; transform: scale(0.93); }
+  to   { opacity: 1; transform: scale(1);    }
+}
+
+.amount {
+  font-family: var(--font-mono);
+  font-size: clamp(36px, 8vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.applicantRow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.applicantName {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.declinedApplicant {
+  margin-top: 20px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  animation: fadeIn 400ms ease 300ms both;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   LOAN DETAILS GRID
+   ════════════════════════════════════════════════════════════════ */
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  animation: fadeSlideUp 400ms ease 400ms both;
+}
+
+.detailCell {
+  background: var(--bg-raised);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 200ms ease;
+}
+
+.detailCell:hover {
+  border-color: var(--border-strong);
+}
+
+.detailLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.detailValue {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   EXPLANATION CARD
+   ════════════════════════════════════════════════════════════════ */
+.explanationCard {
+  background: var(--bg-raised);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeIn 400ms ease 480ms both;
+}
+
+.sectionEyebrow {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.explanationText {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Confidence bar */
+.confidenceWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 4px;
+}
+
+.confidenceLabelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.confidenceLabel {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+.confidenceValue {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.confidenceTrack {
+  width: 100%;
+  height: 3px;
+  background: var(--bg-void);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.confidenceFill {
+  height: 100%;
+  width: var(--fill-width, 0%);
+  background: var(--fill-color, var(--brand-primary));
+  border-radius: var(--radius-full);
+  animation: fillBar 800ms cubic-bezier(0.16, 1, 0.3, 1) 600ms both;
+  transform-origin: left;
+}
+
+@keyframes fillBar {
+  from { width: 0%; }
+  to   { width: var(--fill-width); }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   RISK FLAGS CARD
+   ════════════════════════════════════════════════════════════════ */
+.flagsCard {
+  background: var(--bg-raised);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeIn 400ms ease 520ms both;
+}
+
+.flagsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flagItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.flagIcon {
+  color: #F59E0B;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.flagText {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   DPDP BADGE
+   ════════════════════════════════════════════════════════════════ */
+.dpdpBadge {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 16px;
+  background: rgba(34, 197, 94, 0.04);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  border-radius: var(--radius-lg);
+  animation: fadeIn 400ms ease 560ms both;
+}
+
+.dpdpIcon {
+  color: #22C55E;
+  flex-shrink: 0;
+}
+
+.dpdpText {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: rgba(34, 197, 94, 0.8);
+  line-height: 1.5;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   CTA SECTION
+   ════════════════════════════════════════════════════════════════ */
+.ctaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 8px;
+  animation: fadeSlideUp 400ms ease 600ms both;
+}
+
+.ctaMessage {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.ctaMessage strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.ctaRef {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+}
+
+/* Primary CTA button — approved/conditional */
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  height: 44px;
+  padding: 0 22px;
+  background: var(--btn-color, var(--brand-primary));
+  border: none;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  transition:
+    opacity  150ms ease,
+    transform 150ms ease;
+}
+
+.ctaButton:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.ctaButton:active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Memo button — view bank memo */
+.memoBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  height: 44px;
+  padding: 0 22px;
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition:
+    border-color 150ms ease,
+    color        150ms ease,
+    transform    150ms ease;
+}
+
+.memoBtn:hover {
+  border-color: var(--text-muted);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+/* Secondary CTA button — declined */
+.ctaButtonSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  height: 44px;
+  padding: 0 22px;
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition:
+    border-color 150ms ease,
+    color        150ms ease,
+    transform    150ms ease;
+}
+
+.ctaButtonSecondary:hover {
+  border-color: var(--text-muted);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.ctaButtonSecondary:active {
+  transform: translateY(0);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  .content {
+    padding: 28px 16px 48px;
+    gap: 12px;
+  }
+
+  .verdictCard {
+    padding: 28px 22px 24px;
+  }
+
+  .headline {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .detailsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .detailCell {
+    padding: 13px 14px;
+  }
+
+  .detailValue {
+    font-size: 16px;
+  }
+
+  .explanationCard,
+  .flagsCard {
+    padding: 18px 18px;
+  }
+
+  .ctaButton,
+  .ctaButtonSecondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

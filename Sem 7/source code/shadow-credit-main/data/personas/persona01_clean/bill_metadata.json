@@ -1,0 +1,13 @@
+{
+  "bill_type": "ELECTRICITY",
+  "provider": "MSEDCL",
+  "consumer_number": "PNE-001-1234",
+  "billing_period": "01-Dec-2025 to 31-Dec-2025",
+  "bill_date": "2026-01-05",
+  "due_date": "2026-01-20",
+  "amount_due": 1840.0,
+  "units_consumed": 312,
+  "address_partial": "Shop No. 4, Sadashiv Peth",
+  "ocr_confidence": 0.91,
+  "agent_id": "AGENT_01_OCR"
+}

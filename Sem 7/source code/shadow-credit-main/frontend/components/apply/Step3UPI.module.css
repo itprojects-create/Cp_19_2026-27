@@ -1,0 +1,433 @@
+.step {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.subtitle {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ── Hint block ──────────────────────────────────────────────────── */
+.hint {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--bg-void);
+  border: 1px solid var(--border-default);
+  border-left: 3px solid var(--warning);
+  border-radius: var(--radius-md);
+}
+
+.hintLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--warning);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+}
+
+.hintText {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* ── Drop zone ───────────────────────────────────────────────────── */
+.dropZone {
+  position: relative;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 32px 24px;
+  background: var(--bg-raised);
+  border: 1.5px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition:
+    border-color var(--duration-base) var(--ease-out),
+    background var(--duration-base) var(--ease-out);
+  text-align: center;
+}
+
+.dropZone:hover {
+  border-color: var(--brand);
+  background: var(--bg-overlay);
+}
+
+.dropZoneActive {
+  border-color: var(--brand) !important;
+  border-style: solid !important;
+  background: var(--brand-glow-lg) !important;
+}
+
+.dropIcon {
+  color: var(--text-muted);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.dropZone:hover .dropIcon,
+.dropZoneActive .dropIcon {
+  color: var(--brand);
+}
+
+.dropTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.dropSubtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.dropAccepted {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-disabled);
+  margin-top: 4px;
+}
+
+.hiddenInput {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+/* ── Preview section ─────────────────────────────────────────────── */
+.previewSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeIn var(--duration-base) var(--ease-out) both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Thumbnail grid ──────────────────────────────────────────────── */
+.previewGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+/* ── Individual thumbnail ────────────────────────────────────────── */
+.thumb {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg-raised);
+  border: 1px solid var(--border-default);
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.thumb:hover {
+  border-color: var(--border-strong);
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Upload progress overlay ─────────────────────────────────────── */
+.thumbOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 7, 13, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px;
+}
+
+.thumbProgress {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.thumbBar {
+  width: 80%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.thumbBarFill {
+  height: 100%;
+  background: var(--brand);
+  border-radius: var(--radius-full);
+  transition: width 150ms linear;
+}
+
+/* ── Done checkmark ──────────────────────────────────────────────── */
+.thumbDone {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  background: var(--success);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  animation: popIn var(--duration-base) var(--ease-spring) both;
+}
+
+@keyframes popIn {
+  from { transform: scale(0); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* ── Error indicator ─────────────────────────────────────────────── */
+.thumbError {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  background: var(--danger);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ── Remove button on thumbnail ──────────────────────────────────── */
+.thumbRemove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 18px;
+  height: 18px;
+  background: rgba(7, 7, 13, 0.8);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  opacity: 0;
+  transition:
+    opacity var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out);
+}
+
+.thumb:hover .thumbRemove {
+  opacity: 1;
+}
+
+.thumbRemove:hover {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+}
+
+/* ── File count ──────────────────────────────────────────────────── */
+.fileCount {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.maxNote {
+  color: var(--text-disabled);
+}
+
+/* ── Add more zone ───────────────────────────────────────────────── */
+.addMore {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: var(--bg-raised);
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out);
+}
+
+.addMore:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+  background: var(--bg-overlay);
+}
+
+/* ── Error message ───────────────────────────────────────────────── */
+.errorMsg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--danger-dim);
+  border: 1px solid var(--danger);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--danger);
+  line-height: 1.5;
+  animation: errorShake 400ms var(--ease-out) both;
+}
+
+.errorDot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--danger);
+  flex-shrink: 0;
+}
+
+@keyframes errorShake {
+  0%,100% { transform: translateX(0); }
+  20%     { transform: translateX(-5px); }
+  40%     { transform: translateX(5px); }
+  60%     { transform: translateX(-3px); }
+  80%     { transform: translateX(3px); }
+}
+
+/* ── Continue button ─────────────────────────────────────────────── */
+.continueBtn {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--brand), var(--brand-violet));
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  box-shadow: 0 0 24px var(--brand-glow), 0 4px 12px rgba(0,0,0,0.4);
+  transition:
+    box-shadow var(--duration-base) var(--ease-out),
+    transform var(--duration-fast) var(--ease-spring);
+}
+
+.continueBtn:hover:not(:disabled) {
+  box-shadow: 0 0 40px var(--brand-glow), 0 6px 18px rgba(0,0,0,0.5);
+  transform: translateY(-2px) scale(1.01);
+}
+
+.continueBtn:active:not(:disabled) {
+  transform: translateY(0) scale(0.99);
+}
+
+.continueBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+  transform: none;
+}
+
+.btnContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btnArrow {
+  font-size: 16px;
+  display: inline-block;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.continueBtn:hover:not(:disabled) .btnArrow {
+  transform: translateX(4px);
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.25);
+  border-top-color: rgba(255,255,255,0.9);
+  border-radius: var(--radius-full);
+  animation: spin 700ms linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Skip button ─────────────────────────────────────────────────── */
+.skipBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  padding: 4px 0;
+  font-family: var(--font-body);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.skipBtn:hover {
+  color: var(--text-secondary);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 380px) {
+  .title { font-size: 20px; }
+  .previewGrid { grid-template-columns: repeat(3, 1fr); }
+  .continueBtn { height: 48px; font-size: 14px; }
+}

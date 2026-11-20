@@ -1,0 +1,45 @@
+.container {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 8px;
+}
+
+/* ── Step slide transitions ──────────────────────────────────────── */
+/* Slide in from right — forward navigation                         */
+.slideInRight {
+  animation: slideInFromRight var(--duration-slow) var(--ease-out) both;
+}
+
+/* Slide in from left — backward navigation                         */
+.slideInLeft {
+  animation: slideInFromLeft var(--duration-slow) var(--ease-out) both;
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.stepWrapper {
+  width: 100%;
+}

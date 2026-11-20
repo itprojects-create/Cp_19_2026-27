@@ -1,0 +1,172 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* ── Header ── */
+.thead {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--bg-base);
+}
+
+.th {
+  padding: 0 16px;
+  height: 36px;
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border-default);
+}
+
+/* ── Rows ── */
+.row {
+  border-bottom: 1px solid var(--border-default);
+  cursor: pointer;
+  transition: background 120ms ease;
+  border-left: 2px solid transparent;
+}
+
+.row:hover {
+  background: var(--bg-raised);
+}
+
+.rowAnalyzing {
+  border-left-color: var(--brand-primary);
+  background: rgba(99,102,241,0.03);
+  animation: analyzingPulse 2s ease-in-out infinite;
+}
+
+@keyframes analyzingPulse {
+  0%, 100% { background: rgba(99,102,241,0.03); }
+  50%      { background: rgba(99,102,241,0.06); }
+}
+
+.rowAnalyzing:hover {
+  background: rgba(99,102,241,0.08);
+}
+
+.rowFailed {
+  border-left-color: #EF4444;
+  background: rgba(239,68,68,0.02);
+}
+
+.rowFailed:hover {
+  background: rgba(239,68,68,0.04);
+}
+
+/* ── Cells ── */
+.td {
+  padding: 0 16px;
+  height: 52px;
+  vertical-align: middle;
+}
+
+.sessionIdWrap {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.sessionId {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.demoPill {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  background: var(--bg-overlay);
+  border: 1px solid var(--border-default);
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
+.applicantName {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.location {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.gradePill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  border: 1px solid;
+}
+
+.limitValue {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.dateValue {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.emptyCell {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+/* ── Empty state ── */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+  gap: 10px;
+  text-align: center;
+}
+
+.emptyIcon {
+  color: var(--text-muted);
+  opacity: 0.4;
+}
+
+.emptyTitle {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.emptySub {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  opacity: 0.6;
+  margin: 0;
+}

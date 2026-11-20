@@ -1,0 +1,107 @@
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
+  content: [
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './lib/**/*.{js,ts,jsx,tsx,mdx}',
+    // Including src in case structure changes later
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Georgia', 'serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      colors: {
+        bg: {
+          base: '#0D1117',
+          surface: '#161B22',
+          elevated: '#1C2128',
+          overlay: '#21262D',
+          input: '#0D1117',
+        },
+        border: {
+          subtle: '#21262D',
+          default: '#30363D',
+          strong: '#484F58',
+        },
+        text: {
+          primary: '#E6EDF3',
+          secondary: '#8B949E',
+          tertiary: '#6E7681',
+          inverse: '#0D1117',
+        },
+        accent: {
+          DEFAULT: '#1F6FEB',
+          subtle: 'rgba(31,111,235,0.1)',
+          hover: '#388BFD',
+        },
+        status: {
+          success: '#3FB950',
+          successSubtle: 'rgba(63,185,80,0.1)',
+          warning: '#D29922',
+          warningSubtle: 'rgba(210,153,34,0.1)',
+          error: '#F85149',
+          errorSubtle: 'rgba(248,81,73,0.1)',
+          info: '#1F6FEB',
+        },
+      },
+      borderRadius: {
+        sm: '6px',
+        md: '8px',
+        lg: '12px',
+        xl: '16px',
+        full: '9999px',
+      },
+      boxShadow: {
+        sm: '0 1px 0 rgba(255,255,255,0.04)',
+        border: 'inset 0 0 0 1px #30363D',
+        modal: '0 16px 48px rgba(0,0,0,0.60)',
+      },
+      spacing: {
+        // Custom spacing using 8px base (1 = 8px)
+        '0': '0px',
+        'px': '1px',
+        '0.5': '4px',
+        '1': '8px',
+        '1.5': '12px',
+        '2': '16px',
+        '2.5': '20px',
+        '3': '24px',
+        '3.5': '28px',
+        '4': '32px',
+        '5': '40px',
+        '6': '48px',
+        '7': '56px',
+        '8': '64px',
+        '9': '72px',
+        '10': '80px',
+        '11': '88px',
+        '12': '96px',
+        '14': '112px',
+        '16': '128px',
+        '20': '160px',
+        '24': '192px',
+        '28': '224px',
+        '32': '256px',
+        '36': '288px',
+        '40': '320px',
+        '44': '352px',
+        '48': '384px',
+        '52': '416px',
+        '56': '448px',
+        '60': '480px',
+        '64': '512px',
+        '72': '576px',
+        '80': '640px',
+        '96': '768px',
+      },
+    },
+  },
+  safelist: [],
+  plugins: [],
+};
+export default config;

@@ -1,0 +1,30 @@
+.btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-raised);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    color        var(--duration-fast) var(--ease-out),
+    background   var(--duration-fast) var(--ease-out);
+}
+
+.btn:hover {
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+  background: var(--bg-overlay);
+}
+
+/* Reserve space before mounted — prevents layout shift */
+.placeholder {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}

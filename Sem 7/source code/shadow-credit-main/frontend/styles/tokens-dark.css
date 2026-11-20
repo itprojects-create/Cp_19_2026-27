@@ -1,0 +1,88 @@
+/* ═══════════════════════════════════════════════════════════════
+   SHADOW CREDIT — DARK MODE DESIGN TOKENS (RM Dashboard)
+   Professional financial tool for 8-hour daily usage
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Backgrounds (layered depth) ───────────────────────────── */
+  --bg-base: #0D1117;
+  --bg-surface: #161B22;
+  --bg-elevated: #1C2128;
+  --bg-overlay: #21262D;
+  --bg-input: #0D1117;
+  
+  /* ── Borders ───────────────────────────────────────────────── */
+  --border-subtle: #21262D;
+  --border-default: #30363D;
+  --border-strong: #484F58;
+  
+  /* ── Text ──────────────────────────────────────────────────── */
+  --text-primary: #E6EDF3;
+  --text-secondary: #8B949E;
+  --text-tertiary: #6E7681;
+  --text-inverse: #0D1117;
+  
+  /* ── Accent (electric blue) ────────────────────────────────── */
+  --accent: #1F6FEB;
+  --accent-subtle: #1F6FEB1A;
+  --accent-hover: #388BFD;
+  
+  /* ── Status Colors ─────────────────────────────────────────── */
+  --status-success: #3FB950;
+  --status-success-subtle: #3FB9501A;
+  --status-warning: #D29922;
+  --status-warning-subtle: #D299221A;
+  --status-error: #F85149;
+  --status-error-subtle: #F851491A;
+  --status-neutral: #8B949E;
+  --status-info: #1F6FEB;
+  
+  /* ── Typography ────────────────────────────────────────────── */
+  --font-ui: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-serif: "Georgia", "Times New Roman", serif;
+  
+  --text-xs: 500 11px/1.4 var(--font-ui);
+  --text-sm: 400 12px/1.5 var(--font-ui);
+  --text-base: 400 14px/1.6 var(--font-ui);
+  --text-md: 400 15px/1.6 var(--font-ui);
+  --text-lg: 600 18px/1.4 var(--font-ui);
+  --text-xl: 700 24px/1.2 var(--font-ui);
+  --text-hero: 700 36px/1.1 var(--font-ui);
+  --text-mono: 400 12px/1.6 var(--font-mono);
+  
+  /* ── Spacing (8px base) ────────────────────────────────────── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  
+  /* ── Border Radius ─────────────────────────────────────────── */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  
+  /* ── Shadows (minimal for dark mode) ───────────────────────── */
+  --shadow-sm: 0 1px 0 rgba(255,255,255,0.04);
+  --shadow-border: inset 0 0 0 1px var(--border-default);
+  --shadow-modal: 0 16px 48px rgba(0,0,0,0.60);
+  
+  /* ── Agent Colors ──────────────────────────────────────────── */
+  --agent-supervisor: #7C3AED;
+  --agent-maps: #1F6FEB;
+  --agent-ocr: #0EA5E9;
+  --agent-whatsapp: #10B981;
+  --agent-sms: #6EE7B7;
+  --agent-khata: #F59E0B;
+  --agent-scoring: #8B5CF6;
+  --agent-reconciliation: #EF4444;
+  --agent-compliance: #F97316;
+  --agent-report: #3B82F6;
+}

@@ -1,0 +1,242 @@
+{
+  "apiVersion": "4.0.0",
+  "loanApplicationId": "888a6b83-08fd-48ff-96b0-349c573cb39a",
+  "timestamp": "2026-03-24T22:57:50.192710Z",
+  "loanServiceProvider": {
+    "id": "SHADOW_CREDIT_V1",
+    "name": "Shadow Credit — Ghost MSME Reconstruction Agent",
+    "version": "1.0.0"
+  },
+  "borrowerInfo": {
+    "id": "phase3-test",
+    "entityType": "INDIVIDUAL",
+    "consent": {
+      "consentArtifactId": "ba6e4ec93587830ad0f04a7b9374dea5bad858a040b113955f2cc93848c2bd72",
+      "consentGrantedAt": "2026-03-24T22:57:50.192722Z",
+      "consentScope": "FINANCIAL_DATA_ANALYSIS",
+      "dpdpCompliant": true
+    }
+  },
+  "businessInfo": {
+    "entityType": "MICRO_ENTERPRISE",
+    "msmeClassification": "MICRO",
+    "estimatedAnnualTurnover": 528000.0,
+    "gstRegistered": false,
+    "primaryIndustry": "RETAIL_KIRANA",
+    "yearsInOperation": 0.58,
+    "dataSourcesVerified": [
+      "KHATA",
+      "WHATSAPP"
+    ]
+  },
+  "financialSummary": {
+    "assessmentPeriodDays": 210,
+    "medianMonthlyInflow": 44000.0,
+    "totalInflow90d": 132000.0,
+    "incomeRegularityScore": 0.65,
+    "creditWarmthScore": 0.8377,
+    "creditGrade": "A",
+    "reconciliationStatus": "CLEAN",
+    "cashRatioEstimate": 1.0,
+    "provenanceCoverage": 0.0
+  },
+  "creditAssessment": {
+    "recommendedLoanAmount": 65000.0,
+    "loanAmountWithAAConsent": 65000.0,
+    "formulaComponents": {
+      "multiplier": {
+        "value": 3.0,
+        "source": "Shadow Credit formula v1"
+      },
+      "median_monthly_inflow": {
+        "value": 44000.0,
+        "source": "Agent 03 Khata / Agent 02 WhatsApp"
+      },
+      "income_regularity_score": {
+        "value": 0.65,
+        "source": "Agent 04 Signal 1 IsolationForest"
+      },
+      "concentration_risk": {
+        "value": 0.32,
+        "source": "Agent 03 top_customer_pct"
+      },
+      "continuity_score": {
+        "value": 0.75,
+        "source": "Agent 04 Signal 3 bill recency"
+      }
+    },
+    "creditScore": 754,
+    "creditGrade": "A",
+    "assessmentConfidence": 0.7333,
+    "capType": "NON_AA"
+  },
+  "alternativeDataSources": [
+    {
+      "sourceType": "KHATA",
+      "dataPoints": 24,
+      "periodDays": 210,
+      "confidenceScore": 0.7333,
+      "verificationMethod": "AGENT_STRUCTURED"
+    },
+    {
+      "sourceType": "WHATSAPP",
+      "dataPoints": 0,
+      "periodDays": 210,
+      "confidenceScore": 0.7333,
+      "verificationMethod": "AGENT_NLP"
+    }
+  ],
+  "complianceChecklist": [
+    {
+      "item_id": 1,
+      "criterion": "Business qualifies as Micro Enterprise under MSME Act 2020",
+      "status": "PASS",
+      "evidence_source": "Agent 03 Khata Book / Agent 02 WhatsApp (median_monthly_inflow)",
+      "evidence_value": "Estimated annual turnover ₹528,000 — within ₹5Cr micro threshold",
+      "rbi_reference": "MSME Development (Amendment) Act 2020, S.7: Micro enterprise — investment ≤ ₹1Cr, turnover ≤ ₹5Cr",
+      "notes": "Turnover evidence fits micro-enterprise range.",
+      "upgrade_path": null
+    },
+    {
+      "item_id": 2,
+      "criterion": "Annual turnover ≤ ₹5,00,00,000",
+      "status": "PASS",
+      "evidence_source": "Agent 03 Khata Book / Agent 02 WhatsApp (median_monthly_inflow)",
+      "evidence_value": "Estimated annual turnover ₹528,000 — within ₹5Cr micro threshold",
+      "rbi_reference": "MSME Development (Amendment) Act 2020, S.7(1)(a)(i): Annual turnover ≤ ₹5,00,00,000",
+      "notes": "Turnover evidence fits micro-enterprise range.",
+      "upgrade_path": null
+    },
+    {
+      "item_id": 3,
+      "criterion": "Plant & machinery investment ≤ ₹1,00,00,000",
+      "status": "MANUAL_REQUIRED",
+      "evidence_source": "NOT_AVAILABLE — requires external declaration",
+      "evidence_value": "Not derivable from transaction artifacts",
+      "rbi_reference": "MSME Development (Amendment) Act 2020, S.7(1)(a)(i): Plant & machinery investment ≤ ₹1,00,00,000",
+      "notes": "Investment in plant & machinery cannot be assessed from digital transaction data. Requires CA certificate or Udyam Registration.",
+      "upgrade_path": "Upload Udyam Registration Certificate or CA-certified investment declaration"
+    },
+    {
+      "item_id": 4,
+      "criterion": "Minimum 12 months of verifiable business operation",
+      "status": "PARTIAL",
+      "evidence_source": "Agent 02 WhatsApp + Agent 03 Khata Book (timeline span)",
+      "evidence_value": "Only 210 days of data — 365 required for full compliance",
+      "rbi_reference": "RBI Master Direction - Priority Sector Lending, 2023, Para 6.2: Minimum 12 months operating history for MSME lending",
+      "notes": "Business continuity is assessed using transaction history span.",
+      "upgrade_path": "Upload older WhatsApp exports or Khata Book data to extend history"
+    },
+    {
+      "item_id": 5,
+      "criterion": "GST registration status verified (affects Account Aggregator eligibility)",
+      "status": "PARTIAL",
+      "evidence_source": "Session profile + user declaration",
+      "evidence_value": "No GST registration detected",
+      "rbi_reference": "CGST Act 2017, S.22: Mandatory GST registration threshold ₹40L turnover; affects AA data eligibility",
+      "notes": "Not mandatory below ₹40L turnover, but absence limits AA eligibility and credit cap to ₹3,00,000.",
+      "upgrade_path": "Register at gst.gov.in — process takes 7-10 days. Unlocks ₹10L credit cap."
+    },
+    {
+      "item_id": 6,
+      "criterion": "Minimum 90 days of UPI transaction history for alternative scoring",
+      "status": "PARTIAL",
+      "evidence_source": "Agent 01 OCR (UPI screenshots analyzed)",
+      "evidence_value": "Only 60 days of UPI data",
+      "rbi_reference": "RBI Digital Payments Guidelines 2023: Minimum 90-day UPI transaction history for alternative credit scoring",
+      "notes": "UPI depth improves score stability.",
+      "upgrade_path": "Upload UPI screenshots covering at least 90 days"
+    },
+    {
+      "item_id": 7,
+      "criterion": "Business address verified via utility bill cross-validation",
+      "status": "FAIL",
+      "evidence_source": "Agent 01 OCR (bill extractions) + Maps data (if available)",
+      "evidence_value": "No utility bill detected in uploaded documents",
+      "rbi_reference": "RBI KYC Master Direction 2016 (Updated 2023), Para 38: Address proof mandatory via utility bill or government document",
+      "notes": "Address verification confidence is higher with fresh bill + maps cross-check.",
+      "upgrade_path": "Upload MSEDCL/BSNL/water board bill. Any utility bill accepted.",
+      "rm_explanation": "Compliance failure blocks approval until regulatory evidence is provided.",
+      "action_required": "Upload MSEDCL/BSNL/water board bill. Any utility bill accepted.",
+      "blocking": true
+    },
+    {
+      "item_id": 8,
+      "criterion": "Sole proprietor / firm identity verifiable from uploaded documents",
+      "status": "PARTIAL",
+      "evidence_source": "Session creation (owner_name field)",
+      "evidence_value": "Owner name recorded at session creation",
+      "rbi_reference": "RBI KYC Master Direction 2016, Para 14: Sole proprietor — identity document + business ownership proof",
+      "notes": "Full KYC requires Aadhaar/PAN document upload — not part of current data ingestion scope.",
+      "upgrade_path": "Upload Aadhaar card and PAN card for complete KYC compliance"
+    },
+    {
+      "item_id": 9,
+      "criterion": "No wilful default classification in credit bureau records",
+      "status": "MANUAL_REQUIRED",
+      "evidence_source": "NOT_AVAILABLE — requires external CIBIL API integration",
+      "evidence_value": "Cannot verify via alternative data sources",
+      "rbi_reference": "RBI Circular DBS.OSMOS.No.12/33.01.001/2002-2003: Wilful default classification requires CIBIL bureau check — cannot verify via alternative data",
+      "notes": "CIBIL bureau check required. Shadow Credit cannot assess this criterion. Manual lender verification required before disbursement.",
+      "upgrade_path": "Lender must run CIBIL/Experian check at pre-disbursement stage"
+    },
+    {
+      "item_id": 10,
+      "criterion": "Explicit informed consent obtained per Digital Personal Data Protection Act 2023",
+      "status": "PASS",
+      "evidence_source": "Session audit_log (action_type=SESSION_CREATED, consent_hash stored)",
+      "evidence_value": "Consent hash recorded at session creation",
+      "rbi_reference": "Digital Personal Data Protection Act 2023, S.6: Explicit, informed, specific consent mandatory before processing personal financial data",
+      "notes": "Consent is cryptographically recorded with session_id + timestamp hash. Tamper-evident via audit trail.",
+      "upgrade_path": null
+    },
+    {
+      "item_id": 11,
+      "criterion": "Minimum 2 independent data sources cross-validated",
+      "status": "PASS",
+      "evidence_source": "Shadow Credit pipeline (sources_present tracking)",
+      "evidence_value": "2 sources cross-validated: KHATA, WHATSAPP",
+      "rbi_reference": "RBI Working Paper WPS-23/2023: Cross-validation across minimum 2 independent data sources reduces alternative-data credit assessment error by 43%",
+      "notes": "Minimum threshold met. 3+ sources would improve score confidence.",
+      "upgrade_path": null
+    },
+    {
+      "item_id": 12,
+      "criterion": "AA framework eligibility assessed for credit limits above ₹3,00,000",
+      "status": "NOT_APPLICABLE",
+      "evidence_source": "credit_assessments table + session consent records",
+      "evidence_value": "Credit limit ₹0 — AA consent not required below ₹3L",
+      "rbi_reference": "RBI Account Aggregator Framework, RBI/2021-22/90: Loan applications above ₹3,00,000 are eligible for AA-facilitated financial data sharing",
+      "notes": "Below threshold; AA is optional.",
+      "upgrade_path": null
+    }
+  ],
+  "riskFactors": [
+    {
+      "riskId": "0b323a5c-3b48-4cfa-8d38-05a4b7ad308e",
+      "riskType": "DATA_GAP",
+      "severity": "MEDIUM",
+      "description": "UPI history below 90-day recommended depth.",
+      "mitigant": "Upload additional UPI period exports.",
+      "rbiReference": "RBI Digital Payments Guidelines 2023: Minimum 90-day UPI transaction history for alternative credit scoring"
+    },
+    {
+      "riskId": "bba4c49b-cb8b-411a-8fe1-72e8dfae0f0e",
+      "riskType": "CASH_HEAVY",
+      "severity": "MEDIUM",
+      "description": "High cash-ratio estimate from provenance reconciliation.",
+      "mitigant": "Enable AA consent and provide bank statement linkage.",
+      "rbiReference": "RBI Account Aggregator Framework, RBI/2021-22/90: Loan applications above ₹3,00,000 are eligible for AA-facilitated financial data sharing"
+    }
+  ],
+  "recommendation": {
+    "decision": "APPROVE",
+    "recommendedAmount": 65000.0,
+    "suggestedTenorMonths": 12,
+    "conditions": [],
+    "nextSteps": [
+      "Register for GST on GST Portal (gst.gov.in)",
+      "Enable Account Aggregator consent via your bank's mobile app"
+    ]
+  }
+}

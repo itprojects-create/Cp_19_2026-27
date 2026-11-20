@@ -1,0 +1,23 @@
+{
+  "persona_id": "persona01_clean",
+  "display_name": "Suresh Kumar",
+  "business_name": "Suresh Kirana & General Store",
+  "business_type": "Kirana Store",
+  "location_masked": "Sadashiv Peth, Pune, Maharashtra",
+  "years_in_operation": 7,
+  "demo_mode": true,
+  "expected_outcomes": {
+    "warmth_grade": "A",
+    "credit_limit_range": [
+      95000,
+      115000
+    ],
+    "warmth_score_range": [
+      0.78,
+      0.86
+    ],
+    "clarification_expected": false,
+    "forensic_finding": "NORMAL_CASH",
+    "compliance_pass_rate": 0.83
+  }
+}

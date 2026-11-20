@@ -1,0 +1,24 @@
+{
+  "persona_id": "persona03_seasonal",
+  "display_name": "Akbar Khan",
+  "business_name": "Akbar Master Tailors",
+  "business_type": "Custom Tailoring",
+  "location_masked": "Camp Area, Pune, Maharashtra",
+  "years_in_operation": 11,
+  "demo_mode": true,
+  "expected_outcomes": {
+    "warmth_grade": "B+",
+    "credit_limit_range": [
+      70000,
+      90000
+    ],
+    "seasonal_detected": true,
+    "peak_months": [
+      "October",
+      "November"
+    ],
+    "underwriting_model": "SEASONAL_CREDIT",
+    "clarification_expected": false,
+    "forensic_finding": "NORMAL_CASH"
+  }
+}

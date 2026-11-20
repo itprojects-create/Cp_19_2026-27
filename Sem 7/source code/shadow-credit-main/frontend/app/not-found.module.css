@@ -1,0 +1,105 @@
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  background: var(--bg-base);
+  text-align: center;
+  gap: 16px;
+}
+
+.code {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 4px 12px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-full);
+}
+
+.heading {
+  font-family: var(--font-sans);
+  font-size: clamp(24px, 5vw, 36px);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--text-secondary);
+  max-width: 360px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.homeBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 22px;
+  background: var(--brand-primary, var(--brand));
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.homeBtn:hover {
+  opacity: 0.85;
+}
+
+.dashBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 22px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    color        var(--duration-fast) var(--ease-out);
+}
+
+.dashBtn:hover {
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+
+/* ── Mobile ────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .homeBtn,
+  .dashBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
